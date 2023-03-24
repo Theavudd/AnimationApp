@@ -59,7 +59,7 @@ export default function Alternate() {
 
   const onViewableItemsChanged = React.useCallback(({viewableItems}: any) => {
     storeCurrent(viewableItems);
-    setScroll(viewableItems[0].index);
+    setScroll(viewableItems[0]?.index);
   }, []);
   const renderItem = ({item, index}: {item: any; index: number}) => {
     return (

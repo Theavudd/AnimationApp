@@ -2,10 +2,11 @@ import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
 
-export default function Stripe() {
+export default function Reanimate() {
+  console.log('animate');
   return (
     <SafeAreaView>
-      <Text>Stripe</Text>
+      <Text>Reanimate</Text>
     </SafeAreaView>
   );
 }

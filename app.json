@@ -1,4 +1,13 @@
 {
   "name": "AnimationsApp",
-  "displayName": "AnimationsApp"
+  "displayName": "AnimationsApp",
+  "plugins": [
+    [
+      "@stripe/stripe-react-native",
+      {
+        "merchantIdentifier": "sk_test_tR3PYbcVNZZ796tH88S4VQ2u",
+        "enableGooglePay": true
+      }
+    ]
+  ]
 }
