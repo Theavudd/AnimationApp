@@ -5,7 +5,6 @@ import Alternate from './src/modules/alt';
 import Third from './src/modules/third';
 import RazorPayTest from './src/modules/razorPayTest';
 import InAppPurchase from './src/modules/inAppPurchase/inAppPurchase';
-import {initConnection, getProducts, endConnection} from 'react-native-iap';
 import Stripe from './src/modules/stripe';
 import {StripeProvider} from '@stripe/stripe-react-native';
 import Reanimate from './src/modules/reanimate';

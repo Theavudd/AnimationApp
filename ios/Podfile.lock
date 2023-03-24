@@ -367,9 +367,7 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNIap (12.10.0):
-    - React-Core
-  - RNReanimated (3.0.2):
+  - RNReanimated (2.14.4):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -486,7 +484,6 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
-  - RNIap (from `../node_modules/react-native-iap`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - "stripe-react-native (from `../node_modules/@stripe/stripe-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -585,8 +582,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
-  RNIap:
-    :path: "../node_modules/react-native-iap"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   stripe-react-native:
@@ -643,8 +638,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 15437b576139df27635400de0599d9844f1ab817
   ReactCommon: 349be31adeecffc7986a0de875d7fb0dcf4e251c
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
-  RNIap: d262502226cef0594f8afb37af94f13126d93790
-  RNReanimated: 0a5f87ec1da472cca3e835333fdebe51d983c411
+  RNReanimated: 6668b0587bebd4b15dd849b99e5a9c70fc12ed95
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
@@ -657,6 +651,6 @@ SPEC CHECKSUMS:
   Yoga: 99caf8d5ab45e9d637ee6e0174ec16fbbb01bcfc
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 386d5050870a214377a0c66e7f46215927200400
+PODFILE CHECKSUM: 78ec4d7f80c35b0db21813c59e8c820683d343f5
 
 COCOAPODS: 1.11.3

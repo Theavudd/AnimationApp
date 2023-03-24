@@ -130,19 +130,6 @@ def reactNativeArchitectures() {
 }
 
 android {
-    flavorDimensions "appstore"
-
-    productFlavors {
-    googlePlay {
-        dimension "appstore"
-        missingDimensionStrategy "store", "play"
-    }
-
-    amazon {
-        dimension "appstore"
-        missingDimensionStrategy "store", "amazon"
-        }
-    }
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -153,7 +140,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        missingDimensionStrategy "store", "play"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
@@ -264,7 +250,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':react-native-iap')
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
