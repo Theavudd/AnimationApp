@@ -1,6 +1,6 @@
 import {useStripe} from '@stripe/stripe-react-native';
 import React, {useEffect, useState} from 'react';
-import {Alert, Button, SafeAreaView, View} from 'react-native';
+import {Alert, Button, SafeAreaView} from 'react-native';
 
 export default function CheckoutScreen() {
   const {initPaymentSheet, presentPaymentSheet} = useStripe();

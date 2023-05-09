@@ -9,21 +9,26 @@ import Stripe from './src/modules/stripe';
 import {StripeProvider} from '@stripe/stripe-react-native';
 import Reanimate from './src/modules/reanimate';
 import AlternateReanimate from './src/modules/altReanimate';
+import Chatting from './src/modules/chat';
+import Counter from './src/modules/chat';
+import CyclicList from './src/modules/new';
 
 export default function App() {
   // return <Alternate />;
   // return <AlternateReanimate />;
   // return <Reanimate />;
-  return (
-    <StripeProvider
-      publishableKey="pk_test_51Mp6mJSBNF5KvcY2w2axWHzfSxzoUJVfjXsIo5uXyxVlGgamoLCQugVWKoKfNMS9oP8DXk5PjOb0OA8KluMzvCg100DoDGF8Sq"
-      // urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
-      merchantIdentifier="merchant.com.testing" // required for Apple Pay
-    >
-      <Stripe />
-    </StripeProvider>
-  );
+  // return <Chatting />;
+  // return <Counter />;
+  return <CyclicList />;
+  // return (
+  //   <StripeProvider
+  //     publishableKey="pk_test_51Mp6mJSBNF5KvcY2w2axWHzfSxzoUJVfjXsIo5uXyxVlGgamoLCQugVWKoKfNMS9oP8DXk5PjOb0OA8KluMzvCg100DoDGF8Sq"
+  //     // urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
+  //     merchantIdentifier="merchant.com.testing" // required for Apple Pay
+  //   >
+  //     <Stripe />
+  //   </StripeProvider>
+  // );
   // return <RazorPayTest />;
-
   // return <InAppPurchase />;
 }
