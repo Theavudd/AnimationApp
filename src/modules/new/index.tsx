@@ -1,11 +1,5 @@
 import React, {useState} from 'react';
-import {
-  FlatList,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native';
 import {Default, keyboardData} from './static';
 import {styles} from './styles';
 
