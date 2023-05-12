@@ -11,8 +11,9 @@ import Reanimate from './src/modules/reanimate';
 import AlternateReanimate from './src/modules/altReanimate';
 import Chatting from './src/modules/chat';
 import Counter from './src/modules/chat';
-import CyclicList from './src/modules/new';
+import BoxGame from './src/modules/new';
 import {LogBox} from 'react-native';
+import DynamicColumn from './src/modules/dynamicColumn';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
@@ -22,7 +23,8 @@ export default function App() {
   // return <Reanimate />;
   // return <Chatting />;
   // return <Counter />;
-  return <CyclicList />;
+  return <BoxGame />;
+  // return <DynamicColumn />;
   // return (
   //   <StripeProvider
   //     publishableKey="pk_test_51Mp6mJSBNF5KvcY2w2axWHzfSxzoUJVfjXsIo5uXyxVlGgamoLCQugVWKoKfNMS9oP8DXk5PjOb0OA8KluMzvCg100DoDGF8Sq"

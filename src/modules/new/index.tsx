@@ -3,7 +3,7 @@ import {FlatList, SafeAreaView, Text, TouchableOpacity} from 'react-native';
 import {Default, keyboardData} from './static';
 import {styles} from './styles';
 
-export default function MyComp() {
+export default function BoxGame() {
   const [boxData, setBoxData] = useState(Array(30).fill(''));
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -88,7 +88,6 @@ export default function MyComp() {
   };
   return (
     <SafeAreaView style={styles.container}>
-      {/* <ScrollView bounces={false} style={{flex: 1}}> */}
       <FlatList
         data={boxData}
         renderItem={renderItem}
@@ -101,10 +100,9 @@ export default function MyComp() {
         renderItem={renderKeyboard}
         scrollEnabled={false}
         bounces={false}
-        style={{position: 'absolute', bottom: 50}}
+        style={{position: 'absolute', bottom: 70}}
         contentContainerStyle={styles.keyboardContainer}
       />
-      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
