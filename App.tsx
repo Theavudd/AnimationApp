@@ -12,6 +12,9 @@ import AlternateReanimate from './src/modules/altReanimate';
 import Chatting from './src/modules/chat';
 import Counter from './src/modules/chat';
 import CyclicList from './src/modules/new';
+import {LogBox} from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   // return <Alternate />;

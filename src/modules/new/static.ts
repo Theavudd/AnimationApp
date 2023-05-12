@@ -30,9 +30,9 @@ export const keyboardData = [
 ];
 
 export const Default: any = {
-  0: 'D',
-  1: 'I',
-  2: 'T',
+  12: 'D',
+  0: 'I',
   3: 'T',
-  4: 'O',
+  6: 'T',
+  9: 'O',
 };

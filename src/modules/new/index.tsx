@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import {
   FlatList,
   SafeAreaView,
+  ScrollView,
   Text,
-  TextInput,
   TouchableOpacity,
-  View,
 } from 'react-native';
 import {Default, keyboardData} from './static';
 import {styles} from './styles';
@@ -36,24 +35,24 @@ export default function MyComp() {
 
   const renderItem = ({item, index}: any) => {
     return (
-      <View
+      <TouchableOpacity
         style={[
           styles.boxListItem,
+          selectedIndex === index && styles.shadow,
           checkExist(item, index) === 'exist' && styles.itemExist,
           checkExist(item, index) === 'wrongIndex' && styles.itemCorrect,
           checkExist(item, index) === 'notExist' && styles.notExist,
-        ]}>
-        <TextInput
-          value={item}
-          style={styles.itemInput}
-          onFocus={() => onBoxPress(index)}
-        />
-      </View>
+        ]}
+        activeOpacity={1}
+        onPress={() => onBoxPress(index)}>
+        <Text style={styles.itemInput}>{item}</Text>
+      </TouchableOpacity>
     );
   };
 
   const onKeyPress = (item: string) => {
     if (item == 'enter') {
+      setSelectedIndex(-1);
     } else if (item == 'back') {
       boxData[selectedIndex] = '';
       setBoxData([...boxData]);
@@ -94,7 +93,8 @@ export default function MyComp() {
     );
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      {/* <ScrollView bounces={false} style={{flex: 1}}> */}
       <FlatList
         data={boxData}
         renderItem={renderItem}
@@ -107,8 +107,10 @@ export default function MyComp() {
         renderItem={renderKeyboard}
         scrollEnabled={false}
         bounces={false}
+        style={{position: 'absolute', bottom: 50}}
         contentContainerStyle={styles.keyboardContainer}
       />
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
