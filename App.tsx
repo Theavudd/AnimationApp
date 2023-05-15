@@ -14,11 +14,20 @@ import Counter from './src/modules/chat';
 import BoxGame from './src/modules/new';
 import {LogBox} from 'react-native';
 import DynamicColumn from './src/modules/dynamicColumn';
+import Practice from './src/modules/practice';
+import {Provider} from 'react-redux';
+import {store} from './src/modules/redux/store';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
-  return <Alternate />;
+  // return <Alternate />;
+
+  return (
+    <Provider store={store}>
+      <Practice />
+    </Provider>
+  );
   // return <AlternateReanimate />;
   // return <Reanimate />;
   // return <Chatting />;
