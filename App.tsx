@@ -18,12 +18,12 @@ LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
-  // return <Alternate />;
+  return <Alternate />;
   // return <AlternateReanimate />;
   // return <Reanimate />;
   // return <Chatting />;
   // return <Counter />;
-  return <BoxGame />;
+  // return <BoxGame />;
   // return <DynamicColumn />;
   // return (
   //   <StripeProvider
