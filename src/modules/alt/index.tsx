@@ -61,6 +61,7 @@ export default function Alternate() {
     storeCurrent(viewableItems);
     setScroll(viewableItems[0]?.index);
   }, []);
+
   const renderItem = ({item, index}: {item: any; index: number}) => {
     return (
       <Animated.View
@@ -94,7 +95,7 @@ export default function Alternate() {
 
   const onScroll = (event: any) => {
     const {nativeEvent} = event;
-    const {contentOffset, layoutMeasurement} = nativeEvent;
+    const {contentOffset} = nativeEvent;
     animation.setValue(contentOffset.x);
   };
 

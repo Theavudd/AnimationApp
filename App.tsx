@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, StatusBar} from 'react-native';
 import React, {useEffect} from 'react';
 import Main from './src/modules/main';
 import Alternate from './src/modules/alt';
@@ -23,7 +23,13 @@ LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   // return <Alternate />;
-  return <BlurImp />;
+
+  return (
+    <View style={{flex: 1}}>
+      <StatusBar translucent={true} backgroundColor={'transparent'} />
+      <BlurImp />
+    </View>
+  );
 
   // return (
   //   <Provider store={store}>
