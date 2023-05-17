@@ -8,9 +8,13 @@ import {
   compose,
 } from 'redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import AuthReducer from '@corporateFoods/modules/auth/reducer';
+import AuthReducer from '../../modules/practice/reducer';
+import createSagaMiddleware from 'redux-saga';
+import Saga from './saga';
 
-let middleware: any = [thunkMiddleware, logger];
+const sagaMiddleware = createSagaMiddleware();
+
+let middleware: any = [sagaMiddleware, logger];
 
 //@ts-ignore
 const {pathname} = window.location || {};
@@ -28,3 +32,4 @@ const persistedReducer = persistReducer(persistConfig, RootReducer);
 
 export const store = createStore(persistedReducer, enhancer);
 export const persistor = persistStore(store);
+sagaMiddleware.run(Saga);
