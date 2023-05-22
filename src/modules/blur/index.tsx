@@ -43,7 +43,7 @@ export default function BlurImp() {
         <Animated.View
           style={{
             opacity: animated.interpolate({
-              inputRange: [0, 200],
+              inputRange: [0, 100],
               outputRange: [0.01, Platform.OS === 'ios' ? 0.8 : 0.5],
               extrapolate: 'clamp',
             }),

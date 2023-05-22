@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     zIndex: 10,
   },
   image: {
-    height: '1020%',
+    height: '120%',
     width: '100%',
     paddingTop: 40,
     position: 'absolute',
