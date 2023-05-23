@@ -18,18 +18,20 @@ import Practice from './src/modules/practice';
 import {Provider} from 'react-redux';
 import {store} from './src/modules/redux/store';
 import BlurImp from './src/modules/blur';
+import BottomSheet from './src/modules/customBottomSheet';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   // return <Alternate />;
+  return <BottomSheet/> 
 
-  return (
-    <View style={{flex: 1}}>
-      <StatusBar translucent={true} backgroundColor={'transparent'} />
-      <BlurImp />
-    </View>
-  );
+  // return (
+  //   <View style={{flex: 1}}>
+  //     <StatusBar translucent={true} backgroundColor={'transparent'} />
+  //     <BlurImp />
+  //   </View>
+  // );
 
   // return (
   //   <Provider store={store}>
